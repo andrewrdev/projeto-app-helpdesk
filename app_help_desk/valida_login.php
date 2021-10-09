@@ -17,12 +17,6 @@
 		array('id' => 4, 'email' => 'maria@teste.com.br', 'senha' => '1234', 'perfil_id' => 2),
 	);
 
-	/*
-	echo '<pre>';
-	print_r($usuarios_app);
-	echo '</pre>';
-	*/
-
 	foreach($usuarios_app as $user) {
 
 		if($user['email'] == $_POST['email'] && $user['senha'] == $_POST['senha']) {
@@ -43,26 +37,4 @@
 		$_SESSION['autenticado'] = 'NAO';
 		header('Location: index.php?login=erro');
 	}
-
-
-
-	/*
-	print_r($_GET);
-
-	echo '<br />';
-
-	echo $_GET['email'];
-	echo '<br />';
-	echo $_GET['senha'];
-	*/
-
-	/*
-	print_r($_POST);
-
-	echo '<br />';
-
-	echo $_POST['email'];
-	echo '<br />';
-	echo $_POST['senha'];
-	*/
 ?>
